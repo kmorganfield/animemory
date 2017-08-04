@@ -31,8 +31,8 @@ function beginGame() {
         noises = ["whaleSound", "dolphinSound", "sealSound", "penguinSound"]
     }
     else {
-        animals = ["Emma", "Kennedy", "Faith", "Dana", "Taylor", "Melanie", "Alex", "Marley", "Anya", "Kaylin", "Rachael", "Kammy", "Annebelle", "CJ",
-            "Alexandra", "Amanda", "Blossom", "Carly", "Elaine", "Zahwa", "Aliza", "Priya"
+        animals = ["emma", "kennedy", "faith", "dana", "taylor", "melanie", "alex", "marley", "anya", "kaylin", "rachael", "kammy", "annebelle", "cj",
+            "alexandra", "amanda", "blossom", "carly", "elaine", "zahwa", "aliza", "priya"
         ]
         noises = ["emmaSound", "kennedySound", "faithSound", "danaSound", "taylorSound", "melanieSound", "alexSound", "marleySound", "anyaSound",
             "kaylinSound", "rachaelSound", "kammySound", "annebelleSound", "cjSound", "alexandraSound", "amandaSound", "blossomSound", "carlySound",
@@ -57,7 +57,6 @@ function animalGuess() {
 
 function displayAnimal() {
     if (moveOn == true) {
-        moveOn = false;
         //removes "correct/incorrect" text from previous animal when sphere is clicked
         var helper = sceneNum + 1;
         var textID = "correct" + (sceneNum + 1)
@@ -66,9 +65,19 @@ function displayAnimal() {
 
         var displayID = "display" + helper;
         var text = document.getElementById(displayID)
-        var index = Math.floor(Math.random() * 4);
-        while (used[index] != 0 && allUsed() == false) {
+        var index;
+        if (sceneNum == 3) {
+            index = Math.floor(Math.random() * 22)
+            while (used[index] != 0 && allUsed() == false) {
+                index = Math.floor(Math.random() * 22);
+            }
+        }
+        else {
             index = Math.floor(Math.random() * 4);
+            while (used[index] != 0 && allUsed() == false) {
+                index = Math.floor(Math.random() * 4);
+
+            }
         }
         randomAnimal = animals[index]
         used[index] = 1;
@@ -173,7 +182,6 @@ function correctAnimal(animalID) {
             console.log("helllooooo")
         }
         else {
-            moveOn = false;
             var helper = sceneNum + 1;
             var textID = "correct" + (sceneNum + 1)
             var text2 = document.getElementById(textID)
@@ -189,13 +197,25 @@ function correctAnimal(animalID) {
 
 //function checks if all animals have been used yet
 function allUsed() {
+    var done
     for (var i = 0; i <= used.length; i++) {
         if (used[i] == 0) {
-            return false;
+            done = false;
         }
     }
     // sceneNum = sceneNum+1;
-    return true;
+    if (done == null) {
+        done = true;
+    }
+    if (done == true && sceneNum == 3) {
+        sceneNum = sceneNum +1;
+        var classroom = document.getElementById("classroom-scene")
+        var thank = document.getElementById("end-scene");
+        classroom.setAttribute("visible", "false");
+        thank.setAttribute("visible", "true");
+        
+    }
+    return done;
 }
 
 function playSound() {
@@ -313,7 +333,7 @@ function playSound() {
 }
 
 function changeScene(oldScene, newScene, box1, box2, box3, box4, oldSceneSound, newSceneSound, sceneSphere) {
-    if (allUsed() == true) {
+    if (moveOn = true) {
         console.log("plz work")
         moveOn = true;
         if (oldScene == "rainforest-scene") {
@@ -352,14 +372,14 @@ function changeScene(oldScene, newScene, box1, box2, box3, box4, oldSceneSound, 
         oldSceneSound.components.sound.pauseSound();
         newSceneSound.components.sound.playSound();
 
-        var helper = sceneNum +1;
-       var displayID = "display" + helper;
+        var helper = sceneNum + 1;
+        var displayID = "display" + helper;
         var text = document.getElementById(displayID)
         text.setAttribute("visible", "false")
     }
     else {
-        var helper = sceneNum +1;
-       var displayID = "display" + helper;
+        var helper = sceneNum + 1;
+        var displayID = "display" + helper;
         var text = document.getElementById(displayID)
         text.setAttribute("visible", "true")
         text.setAttribute("value", "You have not finished this stage yet!")
