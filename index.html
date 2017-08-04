@@ -39,22 +39,22 @@
             <img id="sealPic" src="images/seal.jpg">
             <img id="whalePic" src="images/whale.jpg">
 
-            <audio id="frogSound1" src="sounds/froggy.mp3"></audio>
-            <audio id="monkeySound1" src="sounds/monkey-noises.mp3"></audio>
-            <audio id="jaguarSound1" src="sounds/jaguar-noises.mp3"></audio>
-            <audio id="toucanSound1" src="sounds/toucan-noises.wav"></audio>
-            <audio id="yay1" src="sounds/yay.mp3" volume="0.1"></audio>
-            <audio id="fail1" src="sounds/fail.mp3" volume="0.1"></audio>
+            <audio id="frogSound1" src="classSounds/froggy.mp3"></audio>
+            <audio id="monkeySound1" src="classSounds/monkey-noises.mp3"></audio>
+            <audio id="jaguarSound1" src="classSounds/jaguar-noises.mp3"></audio>
+            <audio id="toucanSound1" src="classSounds/toucan-noises.wav"></audio>
+            <audio id="yay1" src="classSounds/yay.mp3" volume="0.1"></audio>
+            <audio id="fail1" src="classSounds/fail.mp3" volume="0.1"></audio>
 
-            <audio id="sheepSound1" src="sounds/sheep-noises.mp3"></audio>
-            <audio id="cowSound1" src="sounds/cow-noises.wav"></audio>
-            <audio id="chickenSound1" src="sounds/chicken-noises.mp3"></audio>
-            <audio id="pigSound1" src="sounds/pig-noises.mp3"></audio>
+            <audio id="sheepSound1" src="classSounds/sheep-noises.mp3"></audio>
+            <audio id="cowSound1" src="classSounds/cow-noises.wav"></audio>
+            <audio id="chickenSound1" src="classSounds/chicken-noises.mp3"></audio>
+            <audio id="pigSound1" src="classSounds/pig-noises.mp3"></audio>
 
-            <audio id="sealSound1" src="sounds/seal-noises.mp3"></audio>
-            <audio id="whaleSound1" src="sounds/whale.mp3"></audio>
-            <audio id="penguinSound1" src="sounds/penguin-noises.mp3"></audio>
-            <audio id="dolphinSound1" src="sounds/dolphin-noises.mp3"></audio>
+            <audio id="sealSound1" src="classSounds/seal-noises.mp3"></audio>
+            <audio id="whaleSound1" src="classSounds/whale.mp3"></audio>
+            <audio id="penguinSound1" src="classSounds/penguin-noises.mp3"></audio>
+            <audio id="dolphinSound1" src="classSounds/dolphin-noises.mp3"></audio>
 
             <a-entity text="font: exo2bold;"></a-entity>
             <a-entity text="https://cdn.aframe.io/fonts/Exo2Bold.fnt;"></a-entity>
@@ -167,24 +167,24 @@
         <a-entity id="rainforest-scene" visible=true>
 
             <a-sky material="src:#rainforest"></a-sky>
-            <a-sound id="rainforest-noise" src="src: url(sounds/rain.mp3)" autoplay="true" position="0 2 5" loop="true" volume="0.5"></a-sound>
+            <a-sound id="rainforest-noise" src="src: url(classSounds/rain.mp3)" autoplay="true" position="0 2 5" loop="true" volume="0.5"></a-sound>
 
-            <a-box id="monkey" visible="true" onclick="correctAnimal('monkey')" visible=true material="src:#monkeyPic" sound="src: url(sounds/monkey-noises.mp3); on: click" position="-6.5 18 -14" depth="4" height="4" width="4" volume="1">
+            <a-box id="monkey" visible="true" onclick="correctAnimal('monkey')" visible=true material="src:#monkeyPic" sound="src: url(classSounds/monkey-noises.mp3); on: click" position="-6.5 18 -14" depth="4" height="4" width="4" volume="1">
                 <a-animation begin="click" attribute="rotation" from="0 0 0" to="0 360 0" dur="1000"></a-animation>
                 <!--<a-animation attribute="position" from="-6.5 18 -14" direction="alternate" to="-6.5 19 -14" dur="10000" repeat="indefinite"></a-animation>-->
             </a-box>
 
-            <a-box id="frog" onclick="correctAnimal('frog')" material="src:#frogPic" sound="src: url(sounds/froggy.mp3); on: click" position="7 4 -10" depth="4" height="4" width="4" volume="3">
+            <a-box id="frog" onclick="correctAnimal('frog')" material="src:#frogPic" sound="src: url(classSounds/froggy.mp3); on: click" position="7 4 -10" depth="4" height="4" width="4" volume="3">
                 <a-animation begin="click" attribute="rotation" from="0 0 0" to="0 360 0" dur="1000"></a-animation>
                 <!--<a-animation attribute="position" from="7 4 -10" direction="alternate" to="7 3 -10" dur="10000" repeat="indefinite"></a-animation>-->
             </a-box>
 
-            <a-box id="toucan" onclick="correctAnimal('toucan')" material="src:#toucanPic" sound="src: url(sounds/toucan-noises.wav); on: click" position="2 15 -5" depth="3" height="3" width="3" volume="3">
+            <a-box id="toucan" onclick="correctAnimal('toucan')" material="src:#toucanPic" sound="src: url(classSounds/toucan-noises.wav); on: click" position="2 15 -5" depth="3" height="3" width="3" volume="3">
                 <a-animation begin="click" attribute="rotation" from="0 0 0" to="0 360 0" dur="1000"></a-animation>
                 <!--<a-animation attribute="position" from="4 25 -2 " direction="alternate " to="4 24 -2" dur="10000" repeat="indefinite"></a-animation>-->
             </a-box>
 
-            <a-box id="jaguar" onclick="correctAnimal('jaguar');info()" material="src:#jaguarPic" sound="src: url(sounds/jaguar-noises.mp3); on: click;  volume: 10;" position="-2 1 -7" depth="3" height="2" width="4" rotation="0 0 40">
+            <a-box id="jaguar" onclick="correctAnimal('jaguar');info()" material="src:#jaguarPic" sound="src: url(classSounds/jaguar-noises.mp3); on: click;  volume: 10;" position="-2 1 -7" depth="3" height="2" width="4" rotation="0 0 40">
                 <a-animation begin="click " attribute="rotation" from="0 0 0" to="0 360 40" dur="1000 "></a-animation>
                 <!--<a-animation attribute="position" from="-2 1 -7" direction="alternate" to="-2 0 -7" dur="10000" repeat="indefinite"></a-animation>-->
             </a-box>
@@ -207,26 +207,26 @@
         <!--farm-->
 
         <a-entity id="farm-scene" visible=false>
-            <a-sound id="farm-noise" src="src: url(sounds/farm.mp3)" autoplay="false" position="0 2 5" loop="true" volume="0.5"></a-sound>
+            <a-sound id="farm-noise" src="src: url(classSounds/farm.mp3)" autoplay="false" position="0 2 5" loop="true" volume="0.5"></a-sound>
 
             <a-sky material="src:#farm"></a-sky>
 
-            <a-box id="cow" visible="true" onclick="correctAnimal('cow')" visible=true material="src:#cowPic" sound="src: url(sounds/cow-noises.wav); on: click; volume: 10;" position="-6.5 18 -15" depth="4" height="4" width="4">
+            <a-box id="cow" visible="true" onclick="correctAnimal('cow')" visible=true material="src:#cowPic" sound="src: url(classSounds/cow-noises.wav); on: click; volume: 10;" position="-6.5 18 -15" depth="4" height="4" width="4">
                 <a-animation begin="click" attribute="rotation" from="0 0 0" to="0 360 0" dur="1000"></a-animation>
                 <a-animation attribute="position" from="-6.5 3 -15" direction="alternate" to="-6.5 4.5 -15" dur="10000" repeat="indefinite"></a-animation>
             </a-box>
 
-            <a-box id="pig" onclick="correctAnimal('pig')" material="src:#pigPic" sound="src: url(sounds/pig-noises.mp3); on: click; volume: 10;" position="7 5 -15" depth="2" height="3" width="3" rotation="0 -20 0">
+            <a-box id="pig" onclick="correctAnimal('pig')" material="src:#pigPic" sound="src: url(classSounds/pig-noises.mp3); on: click; volume: 10;" position="7 5 -15" depth="2" height="3" width="3" rotation="0 -20 0">
                 <a-animation begin="click" attribute="rotation" from="0 0 0" to="0 360 0" dur="1000"></a-animation>
                 <a-animation attribute="position" from="7 5 -15" direction="alternate" to="7 5 -15" dur="10000" repeat="indefinite"></a-animation>
             </a-box>
 
-            <a-box id="sheep" onclick="correctAnimal('sheep')" material="src:#sheepPic" sound="src: url(sounds/sheep-noises.mp3); on: click; volume: 5" position="7 0 -15" depth="3" height="3" width="3" rotation="0 -20 0">
+            <a-box id="sheep" onclick="correctAnimal('sheep')" material="src:#sheepPic" sound="src: url(classSounds/sheep-noises.mp3); on: click; volume: 5" position="7 0 -15" depth="3" height="3" width="3" rotation="0 -20 0">
                 <a-animation begin="click" attribute="rotation" from="0 0 0" to="0 360 0" dur="1000 "></a-animation>
                 <a-animation attribute="position" from="7 -2 -15" direction="alternate" to="7 -1 -15" dur="10000" repeat="indefinite"></a-animation>
             </a-box>
 
-            <a-box id="chicken" onclick="correctAnimal('chicken')" material="src:#chickenPic" sound="src: url(sounds/chicken-noises.mp3); on: click; volume: 7" position="-4.5 -2 -7" depth=" 3 " height="2 " width="2">
+            <a-box id="chicken" onclick="correctAnimal('chicken')" material="src:#chickenPic" sound="src: url(classSounds/chicken-noises.mp3); on: click; volume: 7" position="-4.5 -2 -7" depth=" 3 " height="2 " width="2">
                 <a-animation begin="click" attribute="rotation" from="0 0 0" to="0 360 0" dur="1000"></a-animation>
                 <a-animation attribute="position" from="-4.5 -2 -7" direction="alternate" to="-4.5 -1 -7" dur="10000" repeat="indefinite"></a-animation>
             </a-box>
@@ -250,24 +250,24 @@
         <a-entity id="ocean-scene" visible=false>
 
             <a-sky material="src:#ocean"></a-sky>
-            <a-sound id="ocean-noise" src="src: url(sounds/waves.mp3)" autoplay="false" position="0 2 5" loop="true" volume="0.5"></a-sound>
+            <a-sound id="ocean-noise" src="src: url(classSounds/waves.mp3)" autoplay="false" position="0 2 5" loop="true" volume="0.5"></a-sound>
 
-            <a-box id="dolphin" visible=true onclick="correctAnimal('dolphin')" material="src:#dolphinPic" sound="src: url(sounds/dolphin-noises.mp3); on: click" position="-7 5 -18" depth="3" height="5" width="6" rotation="20 0 0">
+            <a-box id="dolphin" visible=true onclick="correctAnimal('dolphin')" material="src:#dolphinPic" sound="src: url(classSounds/dolphin-noises.mp3); on: click" position="-7 5 -18" depth="3" height="5" width="6" rotation="20 0 0">
                 <a-animation begin="click" attribute="rotation" from="0 0 0" to="0 360 0" dur="1000"></a-animation>
                 <a-animation attribute="position" from="-7 12 -18" direction="alternate" to="-7.5 12 -18" dur="10000" repeat="indefinite"></a-animation>
             </a-box>
 
-            <a-box id="penguin" visible=true onclick="correctAnimal('penguin')" material="src:#penguinPic" sound="src: url(sounds/penguin-noises.mp3); on: click;volume: 5;" position="1 0 -16" depth="2.5" height="3" width="3" rotation="22 -25 0">
+            <a-box id="penguin" visible=true onclick="correctAnimal('penguin')" material="src:#penguinPic" sound="src: url(classSounds/penguin-noises.mp3); on: click;volume: 5;" position="1 0 -16" depth="2.5" height="3" width="3" rotation="22 -25 0">
                 <a-animation begin="click" attribute="rotation" from="0 0 0" to="0 360 0" dur="1000"></a-animation>
                 <a-animation attribute="position" from="12 10 -16" direction="alternate" to="12 9 -16" dur="10000" repeat="indefinite"></a-animation>
             </a-box>
 
-            <a-box id="seal" visible=true onclick="correctAnimal('seal')" material="src:#sealPic" sound="src: url(sounds/seal-noises.mp3); on: click;volume: 5;" position="4 0 -2" depth="1.5" height="1.5" width="1.5">
+            <a-box id="seal" visible=true onclick="correctAnimal('seal')" material="src:#sealPic" sound="src: url(classSounds/seal-noises.mp3); on: click;volume: 5;" position="4 0 -2" depth="1.5" height="1.5" width="1.5">
                 <a-animation begin="click" attribute="rotation" from="0 0 0" to="0 360 0" dur="1000"></a-animation>
                 <a-animation attribute="position" from="4 0 -2" direction="alternate" to="4 1 -2" dur="10000" repeat="indefinite"></a-animation>
             </a-box>
 
-            <a-box id="whale" visible=true onclick="correctAnimal('whale')" material="src:#whalePic" sound="src: url(sounds/whale.mp3); on: click; volume: 5" depth="2" height="2" width="3" rotation="20 0 0">
+            <a-box id="whale" visible=true onclick="correctAnimal('whale')" material="src:#whalePic" sound="src: url(classSounds/whale.mp3); on: click; volume: 5" depth="2" height="2" width="3" rotation="20 0 0">
                 <a-animation begin="click" attribute="rotation" from="0 0 0" to="0 360 0" dur="1000"></a-animation>
                 <a-animation attribute="position" from="6 1 -7" direction="alternate" to="6 -1 -7" dur="10000" repeat="indefinite"></a-animation>
             </a-box>
@@ -288,7 +288,7 @@
         <a-entity id="classroom-scene" visible=false>
             
             <a-sky material="src:#chicago"></a-sky>
-            <a-sound id="chicago-noise" src="src: url(sounds/chicago.wav)" autoplay="false" position="0 2 5" loop="true" volume="0.5"></a-sound>
+            <a-sound id="chicago-noise" src="src: url(classSounds/chicago.wav)" autoplay="false" position="0 2 5" loop="true" volume="0.5"></a-sound>
 
             <a-box id="alex" visible=true onclick="correctAnimal('alex')" material="src:#alexandra" sound="src: url(classSounds/alex.m4a); on: click" position="-10 25 -20" depth="3" height="3" width="3" rotation="0 0 0">
                 <a-animation begin="click" attribute="rotation" from="0 0 0" to="0 360 0" dur="1000"></a-animation>
